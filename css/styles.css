@@ -2,10 +2,10 @@
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
   --color-accent: #ff3400;
-  --color-heading: #1b0760;
+  --color-headings: #1b0760;
   --color-body: #918ca4;
-  --color-border: #ccc;
   --color-body-darker: #5c5577;
+  --color-border: #ccc;
   --border-radius: 30px;
 }
 
@@ -16,21 +16,23 @@
 }
 
 /* Typography */
+
 html {
+  /* 62.5% of 16px = 10px */
   font-size: 62.5%;
 }
 
 body {
-  font-family: Inter, Arial, Arial, Helvetica, sans-serif;
-  color: var(--color-body);
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
   line-height: 1.5;
+  color: var(--color-body);
 }
 
 h1,
 h2,
 h3 {
-  color: var(--color-heading);
+  color: var(--color-headings);
   margin-bottom: 1rem;
 }
 
@@ -54,12 +56,15 @@ p {
   body {
     font-size: 1.8rem;
   }
+
   h1 {
     font-size: 8rem;
   }
+
   h2 {
     font-size: 4rem;
   }
+
   h3 {
     font-size: 2.4rem;
   }
@@ -69,6 +74,7 @@ p {
 a {
   text-decoration: none;
 }
+
 .link-arrow {
   color: var(--color-accent);
   text-transform: uppercase;
@@ -91,8 +97,8 @@ a {
     font-size: 1.5rem;
   }
 }
-
 /* Badges */
+
 .badge {
   border-radius: 20px;
   font-size: 2rem;
@@ -102,13 +108,13 @@ a {
 }
 
 .badge--primary {
-  background-color: var(--color-primary);
-  color: white;
+  background: var(--color-primary);
+  color: #fff;
 }
 
 .badge--secondary {
-  background-color: var(--color-secondary);
-  color: white;
+  background: var(--color-secondary);
+  color: #fff;
 }
 
 .badge--small {
@@ -120,16 +126,16 @@ a {
   .badge {
     font-size: 1.5rem;
   }
+
   .badge--small {
     font-size: 1.2rem;
   }
 }
-
 /* Lists */
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-heading);
+  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -152,19 +158,27 @@ a {
     padding-left: 0;
   }
 }
-
 /* Icons */
 .icon {
   width: 40px;
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon--primary {
   fill: var(--color-primary);
 }
 
+.icon--white {
+  fill: #fff;
+}
+
 .icon-container {
-  background-color: #f3f9fa;
+  background: #f3f9fa;
   width: 64px;
   height: 64px;
   border-radius: 100%;
@@ -177,14 +191,6 @@ a {
   background: var(--color-accent);
 }
 
-.icon--white {
-  fill: white;
-}
-
-.icon--small {
-  width: 30px;
-  height: 30px;
-}
 /* Buttons */
 .btn {
   border-radius: 40px;
@@ -194,14 +200,14 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   padding: 2rem 3rem;
+  text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
-  text-align: center;
 }
 
 .btn--primary {
   background: var(--color-primary);
-  color: white;
+  color: #fff;
 }
 
 .btn--primary:hover {
@@ -210,16 +216,16 @@ a {
 
 .btn--secondary {
   background: var(--color-secondary);
-  color: white;
+  color: #fff;
 }
 
 .btn--secondary:hover {
-  background: #00c8eb;
+  background: #05cdf0;
 }
 
 .btn--accent {
   background: var(--color-accent);
-  color: white;
+  color: #fff;
 }
 
 .btn--accent:hover {
@@ -227,14 +233,14 @@ a {
 }
 
 .btn--outline {
-  background: white;
-  color: var(--color-heading);
-  border: 2px solid var(--color-heading);
+  background: #fff;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
 }
 
 .btn--outline:hover {
-  background: var(--color-heading);
-  color: white;
+  background: var(--color-headings);
+  color: #fff;
 }
 
 .btn--stretched {
@@ -257,7 +263,7 @@ a {
 .input {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
-  color: var(--color-heading);
+  color: var(--color-headings);
   font-size: 2rem;
   outline: 0;
   padding: 1.5rem 3.5rem;
@@ -288,7 +294,6 @@ a {
     font-size: 1.5rem;
   }
 }
-
 /* Cards */
 .card {
   border-radius: 7px;
@@ -303,12 +308,12 @@ a {
 
 .card--primary .card__header {
   background: var(--color-primary);
-  color: white;
+  color: #fff;
 }
 
 .card--secondary .card__header {
   background: var(--color-secondary);
-  color: white;
+  color: #fff;
 }
 
 .card--secondary .badge--secondary {
@@ -375,7 +380,6 @@ a {
     font-size: 1.7rem;
   }
 }
-
 /* Media */
 .media {
   display: flex;
@@ -392,7 +396,6 @@ a {
 .media__image {
   margin-top: 1rem;
 }
-
 /* Quotes */
 .quote {
   font-size: 3rem;
@@ -417,7 +420,7 @@ a {
 }
 
 .quote__organization {
-  color: var(--color-heading);
+  color: var(--color-headings);
   opacity: 0.4;
   font-size: 2rem;
   font-style: normal;
@@ -432,9 +435,11 @@ a {
   .quote {
     font-size: 2rem;
   }
+
   .quote__author {
     font-size: 2.4rem;
   }
+
   .quote__organization {
     font-size: 1.6rem;
   }
@@ -461,8 +466,10 @@ a {
 .testimonial {
   padding: 3rem;
 }
+
 .testimonial__image {
   position: relative;
+  margin: 0 3rem;
 }
 
 .testimonial__image > img {
@@ -476,13 +483,18 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .testimonial__image {
+    margin: 0;
+  }
+
   .testimonial .quote,
   .testimonial .quote__author {
     font-size: 2.4rem;
   }
 
-  .testimonial__quote {
+  .testimonial .quote {
     margin-left: 6rem;
+    margin-right: 0;
   }
 }
 
@@ -494,22 +506,22 @@ a {
 
 .callout--primary {
   background: var(--color-primary);
-  color: white;
+  color: #fff;
 }
 
 .callout__heading {
-  color: white;
+  color: #fff;
   margin-top: 0;
   font-size: 3rem;
-}
-
-.callout__content {
-  text-align: center;
 }
 
 .callout .btn {
   justify-self: center;
   align-self: center;
+}
+
+.callout__content {
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -520,8 +532,41 @@ a {
   .callout__content {
     text-align: left;
   }
+
   .callout .btn {
     justify-self: start;
-    margin: 2rem;
+    margin: 0 2rem;
   }
+}
+
+/* Collapsibles */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
 }
